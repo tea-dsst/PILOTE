@@ -1,0 +1,12 @@
+[build]
+  command = "vite build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Nécessaire pour que les adresses comme /budget ou /connexion fonctionnent après actualisation.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
